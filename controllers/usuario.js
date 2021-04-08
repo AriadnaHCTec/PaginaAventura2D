@@ -39,6 +39,4 @@ exports.getRegistros = (req,res)=>{
                 hora:"14:00"
             });
         })
-
-
 };
