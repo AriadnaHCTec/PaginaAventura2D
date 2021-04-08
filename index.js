@@ -1,12 +1,14 @@
 //Biblioteca para definir lo que es un JSON
 const bodyParser = require("body-parser");
 //Biblioteca para generar las rutas de acuerdo al sistema operativo
-const path = require("path")
+const path = require("path");
 //Importar la biblioteca express para la creación de servidores
 const express = require('express');
 
 //Traer la conexión de la base de datos
 const sequelize = require('./util/database');
+
+const usuarioRoutes = require('.routes/usuario');
 
 //Crear el servidor
 const app = express();
@@ -23,9 +25,10 @@ app.use(bodyParser.urlencoded({extended:true}))
 //Configurar visualización de plantillas
 app.engine('html', require('ejs').renderFile);
 app.set('view engine','ejs');
+app.use('/usuario',usuarioRoutes);
 
 //Inicializar servidor
-let puerto=8080;
+const puerto=8080;
 sequelize.sync()
     .then(resultado=>{
         console.log('Conexión exitosa');
