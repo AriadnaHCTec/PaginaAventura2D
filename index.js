@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 //Middleware para configurar la recepción de formularios
 app.use(bodyParser.urlencoded({extended:true}))
 
-//Configurar visualización de plantills
+//Configurar visualización de plantillas
 app.engine('html', require('ejs').renderFile);
 app.set('view engine','ejs');
 
