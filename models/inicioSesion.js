@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 //Traer el objeto sequelize
 const sequelize = require('../util/database');
+//Definicion del modelo (tabla)
 
 const InicioSesion = sequelize.define('Sesion',{
     id:{
