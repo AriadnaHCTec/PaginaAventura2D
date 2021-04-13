@@ -9,8 +9,13 @@ exports.getAgregarUsuario = (req,res)=>{
 exports.postAgregarUsuario = (req,res)=>{
     console.log(req.body);
     Usuario.create({
-        usuario: req.body.usuarioUsuario,
-        password: req.body.passwordUsuario
+        usuario: req.body.nombreUsuario,
+        contraseña: req.body.contraseñaUsuario,
+        correo: req.body.correoUsuario,
+        genero: req.body.generoUsuario,
+        fechaDeNacimiento: req.body.fechaDeNacimientoUsuario,
+        profesion: req.body.profesionUsuario
+        //estado: req.body.estadoUsuario
     }).then(resultado=>console.log("Registro exitoso"))
       .catch(error=>console.log(error));
 

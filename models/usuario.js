@@ -2,34 +2,29 @@ const Sequelize = require('sequelize');
 //Traer el objeto sequelize
 const sequelize = require('../util/database');
 
-const InicioSesion = sequelize.define('Sesion',{
-    idJugador:{
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true   
-    },
-    idLogro:{
-        type: Sequelize.INTEGER,
-        allowNull: false
-        //abajo se pone un codigo para que sea llave foranea
-    },
-    nombreUsuario:{
+const Usuario = sequelize.define('Usuario',{
+    usuario:{
         type: Sequelize.STRING(50),
-        allowNull: false
-    },
-    fechaRegistro:{
-        type: Sequelize.DATE,
-        allowNull: true,
-        defaultValue: new Date()
-    },
-    correo:{
-        type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        primaryKey: true   
     },
     contraseña:{
         type: Sequelize.STRING,
         allowNull: false
+    },
+    correo:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },    
+    idLogro:{
+        type: Sequelize.INTEGER,
+        allowNull: true
+        //abajo se pone un codigo para que sea llave foranea
+    },    
+    fechaRegistro:{
+        type: Sequelize.DATE,
+        allowNull: true,
+        defaultValue: new Date()
     },
     genero:{
         type: Sequelize.STRING(1),
@@ -45,9 +40,9 @@ const InicioSesion = sequelize.define('Sesion',{
     },
     estado:{
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     }
 
 });
 
-module.exports = InicioSesion;
+module.exports = Usuario;
