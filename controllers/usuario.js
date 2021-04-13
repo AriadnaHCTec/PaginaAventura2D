@@ -33,7 +33,7 @@ exports.getRegistros = (req,res)=>{
                 data.push(registro.dataValues);
             });
             console.log(data);
-            res.render('ejemploEJS.html',{
+            res.render('registroEJS.html',{
                 personas:data,
                 sesion:"Autorizado",
                 hora:"14:00"

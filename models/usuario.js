@@ -3,29 +3,51 @@ const Sequelize = require('sequelize');
 const sequelize = require('../util/database');
 
 const InicioSesion = sequelize.define('Sesion',{
-    id:{
+    idJugador:{
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true   
     },
-    usuario:{
+    idLogro:{
+        type: Sequelize.INTEGER,
+        allowNull: false
+        //abajo se pone un codigo para que sea llave foranea
+    },
+    nombreUsuario:{
         type: Sequelize.STRING(50),
         allowNull: false
     },
-    fecha:{
+    fechaRegistro:{
         type: Sequelize.DATE,
         allowNull: true,
         defaultValue: new Date()
     },
-    horaInicio:{
-        type: Sequelize.TIME,
+    correo:{
+        type: Sequelize.STRING,
         allowNull: false
     },
-    horaFinal:{
-        type: Sequelize.TIME,
+    contraseña:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    genero:{
+        type: Sequelize.STRING(1),
+        allowNull: false
+    },
+    fechaDeNacimiento:{
+        type: Sequelize.DATE,
+        allowNull: false
+    },
+    profesion:{
+        type: Sequelize.STRING(50),
+        allowNull: false
+    },
+    estado:{
+        type: Sequelize.STRING,
         allowNull: false
     }
+
 });
 
 module.exports = InicioSesion;
