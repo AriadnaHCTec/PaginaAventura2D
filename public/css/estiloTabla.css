@@ -1,0 +1,17 @@
+body{
+    background-color:white ; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#titulo{
+    background-color: #00a4a9;
+}
+
+#tabla{
+    align-items:center; 
+    text-align:center;
+}
+
+#btnNavegacion{
+    background-color: #00a4a9;
+}

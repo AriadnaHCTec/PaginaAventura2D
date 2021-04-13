@@ -1,0 +1,19 @@
+  
+header{
+    background-color:#00a4a9;
+    height: 75px;
+    font-size-adjust: initial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer{
+    background-color:#00a3a962; 
+    height: 40px;font-size-adjust: initial;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-opciones{
+    background-color:#00a4a9;color:white;padding: 10px 32px;
+}
+
+#btnNavegacion{
+    background-color: #00a4a9;
+}
