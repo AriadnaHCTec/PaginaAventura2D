@@ -13,7 +13,11 @@
         <ol>
             <!--<li>usuario: Maria password:1234 edad:18</li>-->
             <%personas.forEach((persona)=>{%>
-                <li>Usuario: <%=persona.usuario%> Password: <%=persona.password%> </li>
+                <li>Usuario: <%=persona.usuario%> Password: <%=persona.contraseña%> 
+                    correo: <%=persona.correo%> idLogro: <%=persona.idLogro%>
+                    fechaRegistro: <%=persona.fechaRegistro%> Genero: <%=persona.genero%>
+                    fechaDeNacimeinto: <%=persona.fechaDeNacimiento%>
+                    profesion: <%=persona.profesion%> Estado: <%=persona.estado%></li>
             <%});%>
         </ol>
         <footer>

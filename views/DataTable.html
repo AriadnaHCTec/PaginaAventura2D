@@ -16,70 +16,31 @@
             <table class="table table-hover table-bordered" style="align-items:center; text-align:center">
                 <thead>
                     <tr>
-                        <th scope="col">ID </th>
-                        <th scope= "col">Edad</th>
-                        <th scope= "col">Género</th>
-                        <th scopre="col">Carrera de interés</th>
+                        <th scope="col">Usuario </th>
+                        <th scope= "col">Contraseña</th>
+                        <th scope= "col">Correo</th>
+                        <th scopre="col">idLogro</th>
+                        <th scopre="col">FechaRegistro</th>
+                        <th scopre="col">FechaNacimiento</th>
+                        <th scopre="col">Genero</th>
+                        <th scopre="col">Profesion</th>
                         <th scopre="col">Estado</th>
-                        <th scopre="col">Profesión</th>
-                        <th scopre="col">Último grado de escolaridad</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr id="1">
-                        <th scope="row">1</th>
-                        <td>7</td>
-                        <td>Mujer</td>
-                        <td>Medicina</td>
-                        <td>Estado de México</td>
-                        <td>Estudiante</td>
-                        <td>1ero de Primaria</td>
-                    </tr>
-                    <tr id="2">
-                        <th scope="row">2</th>
-                        <td>10</td>
-                        <td>Hombre</td>
-                        <td>Mecánica</td>
-                        <td>Veracrúz</td>
-                        <td>Estudiante</td>
-                        <td>4to de Primaria</td>
-                    </tr>  
-                    <tr id="3">
-                        <th scope="row">3</th>
-                        <td>15</td>
-                        <td>Hombre</td>
-                        <td>Quimica</td>
-                        <td>Sinaloa</td>
-                        <td>Estudiante</td>
-                        <td>2ndo de Secundaria</td>
-                    </tr> 
-                    <tr id="4">
-                        <th scope="row">4</th>
-                        <td>9</td>
-                        <td>Hombre</td>
-                        <td>Computación</td>
-                        <td>CDMX</td>
-                        <td>Estudiante</td>
-                        <td>3ero de Primaria</td>
-                    </tr>   
-                    <tr id="5">
-                        <th scope="row">5</th>
-                        <td>17</td>
-                        <td>Mujer</td>
-                        <td>Industrial</td>
-                        <td>Querétaro</td>
-                        <td>Trabajador</td>
-                        <td>2ndo de Preparatoria</td>   
-                    </tr>
-                    <tr id="6">
-                        <th scope="row">6</th>
-                        <td>18</td>
-                        <td>Mujer</td>
-                        <td>Biología</td>
-                        <td>Colima</td>
-                        <td>Estudiante</td>
-                        <td>3ero de Preparatoria</td>   
-                    </tr>                                      
+                    <%personas.forEach((persona)=>{%>
+                        <tr>
+                            <td><%=persona.usuario%></td>
+                            <td><%=persona.contraseña%></td>
+                            <td><%=persona.correo%></td>
+                            <td><%=persona.idLogro%></td>
+                            <td><%=persona.fechaRegistro%></td>
+                            <td><%=persona.fechaDeNacimiento%></td>
+                            <td><%=persona.genero%></td>
+                            <td><%=persona.profesion%></td>
+                            <td><%=persona.estado%></td>
+                        </tr>
+                    <%});%>
                 </tbody>
             </table>
         </div>

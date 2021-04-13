@@ -15,9 +15,9 @@ const InicioSesion = sequelize.define('Sesion',{
         allowNull: false
     },
     fecha:{
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: true,
-        defaultValue: new Date()
+        defaultValue: Sequelize.NOW
     },
     horaInicio:{
         type: Sequelize.TIME,
