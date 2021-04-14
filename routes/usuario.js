@@ -15,6 +15,9 @@ router.get('/confirmacion',usuarioController.getConfirmacion);
 //Mostrar los registros de la base de datos
 router.get('/registros',usuarioController.getRegistros);
 
+//Mostrar un solo registro
+router.get('/registro/:usuario',usuarioController.getRegistro);
+
 //Obtener los datos del formulario
 router.post('/iniciarSesion',usuarioController.postIniciarSesion);
 

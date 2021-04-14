@@ -14,8 +14,8 @@ exports.postAgregarUsuario = (req,res)=>{
         correo: req.body.correoUsuario,
         genero: req.body.generoUsuario,
         fechaDeNacimiento: req.body.fechaDeNacimientoUsuario,
-        profesion: req.body.profesionUsuario
-        //estado: req.body.estadoUsuario
+        profesion: req.body.profesionUsuario,
+        estado: req.body.estadoUsuario
     }).then(resultado=>console.log("Registro exitoso"))
       .catch(error=>console.log(error));
 
@@ -23,7 +23,8 @@ exports.postAgregarUsuario = (req,res)=>{
 };
 
 exports.getConfirmacion = (req,res)=>{
-    res.send("Registro exitoso");
+    //res.send("Registro exitoso");
+    res.sendFile(path.join(__dirname,'..','views','confirmacion.html'));
 };
 
 exports.getRegistros = (req,res)=>{
@@ -38,31 +39,40 @@ exports.getRegistros = (req,res)=>{
                 data.push(registro.dataValues);
             });
             console.log(data);
-            /*res.render('registroEJS.html',{
-                personas:data,
-                sesion:"Autorizado",
-                hora:"14:00"
-            });*/
-
             res.render('DataTable.html',{
                 personas:data,
                 sesion:"Autorizado",
                 hora:"14:00"
             });
-        })
-    exports.postIniciarSesion = (req,res)=>{
-        console.log(req.body);
-        /*Usuario.create({
-            usuario: req.body.nombreUsuario,
-            contraseña: req.body.contraseñaUsuario,
-            correo: req.body.correoUsuario,
-            genero: req.body.generoUsuario,
-            fechaDeNacimiento: req.body.fechaDeNacimientoUsuario,
-            profesion: req.body.profesionUsuario
-            //estado: req.body.estadoUsuario
-        }).then(resultado=>console.log("Registro exitoso"))
-            .catch(error=>console.log(error));
-    
-        res.redirect("/usuario/confirmacion");*/
-    };
+        })    
 };
+
+exports.postIniciarSesion = (req,res)=>{
+    console.log(req.body);
+    Usuario.findByPk(req.body.usuario)
+    .then(resultado=>{
+        res.send(resultado);
+    })
+    .catch(error=>{
+        console.log(error);
+        res.send(error);
+    })
+};
+
+exports.getRegistro = (req,res) =>{
+    console.log(req.params);
+    Usuario.findByPk(req.params.usuario)
+    .then(resultado=>{
+        var data=[];
+        data.push(resultado.dataValues);
+        res.render('DataTable.html',{
+            personas:data,
+            sesion:"Autorizado",
+            hora:"14:00"
+        });
+    })
+    .catch(error=>{
+        console.log(error);
+        res.send(error);
+    })
+}
