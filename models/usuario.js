@@ -16,11 +16,6 @@ const Usuario = sequelize.define('Usuario',{
         type: Sequelize.STRING,
         allowNull: false
     },    
-    idLogro:{
-        type: Sequelize.INTEGER,
-        allowNull: true
-        //abajo se pone un codigo para que sea llave foranea
-    },    
     fechaRegistro:{
         type: Sequelize.DATE,
         allowNull: true,
