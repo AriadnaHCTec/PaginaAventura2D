@@ -51,7 +51,15 @@ exports.postIniciarSesion = (req,res)=>{
     console.log(req.body);
     Usuario.findByPk(req.body.usuario)
     .then(resultado=>{
-        res.send(resultado);
+        if(resultado){
+            if(req.body.contraseña == resultado.contraseña){
+                res.send("osiosi");
+            }else{
+                res.send("incorrecto");
+            }
+        }else{
+            res.send("no existe el usuario");
+        }        
     })
     .catch(error=>{
         console.log(error);
