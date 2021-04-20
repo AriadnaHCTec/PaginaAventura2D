@@ -53,7 +53,7 @@ const Jugador = (sequelize)=>{
         },
         estadoJuego:{
             type: Sequelize.BOOLEAN,
-            allowNull: false,
+            allowNull: true,
             defaultValue: false
         }
     })

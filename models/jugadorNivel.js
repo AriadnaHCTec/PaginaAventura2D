@@ -18,11 +18,11 @@ const JugadorNivel = (sequelize)=>{
         },
         preguntas:{
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         intentoPreguntas:{
             type: Sequelize.INTEGER,
-            allowNull: false
+            allowNull: true
         }
     })
 };

@@ -7,10 +7,9 @@ const express = require('express');
 
 //Traer la conexión de la base de datos
 const sequelize = require('./util/database');
-
 const usuarioRoutes = require('./routes/usuario');
 
-const steamRoutes = require('./routes/steam');
+//const steamRoutes = require('./routes/steam');
 
 //Crear el servidor
 const app = express();
@@ -28,7 +27,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.engine('html', require('ejs').renderFile);
 app.set('view engine','ejs');
 app.use('/usuario',usuarioRoutes);
-app.use('/steam',steamRoutes);
+//app.use('/steam',steamRoutes);
 
 
 //Inicializar servidor
