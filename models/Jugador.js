@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 //Traer el objeto sequelize
 const sequelize = require('../util/database');
 
-const Usuario = sequelize.define('Usuario',{
+const Jugador = sequelize.define('Jugador',{
     nombreUsuario:{
         type: Sequelize.STRING(50),
         allowNull: false,
@@ -58,4 +58,4 @@ const Usuario = sequelize.define('Usuario',{
 
 });
 
-module.exports = Usuario;
+module.exports = Jugador;
