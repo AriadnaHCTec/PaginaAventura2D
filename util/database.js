@@ -1,5 +1,6 @@
 //Configuración de sequelize
 const Sequelize = require('sequelize');
+const {applyRelations} = require('./relaciones');
 
 //Asiganción de valores específicos a la BD
 const nombreDB = 'videojuego';
@@ -9,7 +10,7 @@ const hostDB = 'localhost';
 const dialectoDB= 'mssql';
 
 const sequelize = new Sequelize(nombreDB,usuarioDB,passwordDB,{
-    host: hostDB,
+    //host: hostDB,
     dialect:dialectoDB,
     dialectOptions:{
         options:{
@@ -24,16 +25,20 @@ const sequelize = new Sequelize(nombreDB,usuarioDB,passwordDB,{
 });
 
 //Cargar los modelos
-/*const modelDefiners = [
-    require('../models/Jugador'),
-    require('../models/Nivel'),
-    require('../models/Encuesta')
-];*/
+const modelDefiners = [
+    require('../models/jugador'),
+    require('../models/nivel'),
+    require('../models/encuesta'),
+    require('../models/jugadorNivel')
+];
 
 //Vincular el objeto de conexion con los modelos
-//for(const modelDefiner of modelDefiners){
+for(const modelDefiner of modelDefiners){
+    modelDefiner(sequelize);
+}
 
-//}
+//Construir las relaciones
+applyRelations(sequelize);
 
-//exportando el objeto sequelize
+//exportando el objeto sequelize (elemento de conexion)
 module.exports = sequelize;

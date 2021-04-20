@@ -30,12 +30,13 @@ app.set('view engine','ejs');
 app.use('/usuario',usuarioRoutes);
 app.use('/steam',steamRoutes);
 
+
 //Inicializar servidor
 const puerto=8080;
-sequelize.sync(/*{force: true}*/)
+sequelize.sync()
     .then(resultado=>{
         console.log('Conexión exitosa');
         //Lanza el servidor para escuchar peticiones
-        app.listen(puerto,()=>console.log("Servidor en línea en el puerto 8080"));
+        //app.listen(puerto,()=>console.log("Servidor en línea en el puerto 8080"));
     })
     .catch(error=>console.log(error));
