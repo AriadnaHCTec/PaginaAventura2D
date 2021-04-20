@@ -24,11 +24,11 @@ const sequelize = new Sequelize(nombreDB,usuarioDB,passwordDB,{
 });
 
 //Cargar los modelos
-const modelDefiners = [
+/*const modelDefiners = [
     require('../models/Jugador'),
     require('../models/Nivel'),
     require('../models/Encuesta')
-];
+];*/
 
 //Vincular el objeto de conexion con los modelos
 //for(const modelDefiner of modelDefiners){

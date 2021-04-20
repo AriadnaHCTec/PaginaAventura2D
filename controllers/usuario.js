@@ -1,9 +1,18 @@
 //Traer el modelo asociado a la tabla usuario
 const Usuario = require('../models/usuario');
+const Jugador = require('../models/jugador');
 const path = require('path');
+
+exports.getHome = (req,res)=>{
+    res.sendFile(path.join(__dirname,'..','views','home.html'));
+}
 
 exports.getAgregarUsuario = (req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','registro.html'));
+}
+
+exports.getInicioSesion = (req,res)=>{
+    res.sendFile(path.join(__dirname,'..','views','inicioSesion.html'));
 }
 
 exports.postAgregarUsuario = (req,res)=>{
