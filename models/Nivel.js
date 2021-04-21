@@ -1,9 +1,7 @@
-/*const Sequelize = require('sequelize');
-//Traer el objeto sequelize
-const sequelize = require('../util/database');
+const Sequelize = require('sequelize');
 
-const Nivel = (sequelize)=>{ 
-    sequelize.define('nivel',{
+const Nivel = (sequelize)=>{
+    sequelize.define('Nivel',{
         numNivel:{
             type: Sequelize.STRING(50),
             allowNull: false,
@@ -13,7 +11,8 @@ const Nivel = (sequelize)=>{
             type: Sequelize.STRING(50),
             allowNull: false
         }
+
     })
 };
 
-module.exports = Nivel;*/
+module.exports = Nivel;
