@@ -7,6 +7,10 @@ exports.getHome = (req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','home.html'));
 }
 
+exports.getHomeSteam = (req,res)=>{
+    res.sendFile(path.join(__dirname,'..','views','homeSteam.html'));
+}
+
 exports.getAgregarUsuario = (req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','registro.html'));
 }

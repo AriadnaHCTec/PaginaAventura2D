@@ -9,6 +9,7 @@ const express = require('express');
 const sequelize = require('./util/database');
 
 const usuarioRoutes = require('./routes/usuario');
+const steamRoutes = require('./routes/steam');
 
 
 //Crear el servidor
@@ -27,6 +28,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.engine('html', require('ejs').renderFile);
 app.set('view engine','ejs');
 app.use('/usuario',usuarioRoutes);
+app.use('/steam',steamRoutes);
 
 //Inicializar servidor
 const puerto=8080;
