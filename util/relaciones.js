@@ -1,4 +1,4 @@
-//funcion que recibe el objeto de conexion
+/*//funcion que recibe el objeto de conexion
 function applyRelations(sequelize){
     console.log(sequelize.models);
     const Usuario = sequelize.models.Usuario;
@@ -17,4 +17,4 @@ function applyRelations(sequelize){
 
 }
 
-module.exports = {applyRelations};
+module.exports = {applyRelations};*/

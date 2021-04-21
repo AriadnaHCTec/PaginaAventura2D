@@ -1,4 +1,6 @@
-const Sequelize = require('sequelize');
+/*const Sequelize = require('sequelize');
+//Traer el objeto sequelize
+const sequelize = require('../util/database');
 
 const UsuarioNivel = (sequelize)=>{
     sequelize.define('usuarioNivel',{
@@ -9,11 +11,10 @@ const UsuarioNivel = (sequelize)=>{
         },
         fechaInicio:{
             type: Sequelize.DATEONLY,
-            defaultValue: new Date(),
-            allowNull: true,  
+            allowNull: false,  
         },
         fechaFinal:{
-            type: Sequelize.DATEONLY,            
+            type: Sequelize.DATEONLY,
             allowNull: true
         },
         vidas:{
@@ -31,4 +32,4 @@ const UsuarioNivel = (sequelize)=>{
     })
 };
 
-module.exports = UsuarioNivel;
+module.exports = UsuarioNivel;*/

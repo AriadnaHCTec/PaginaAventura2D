@@ -1,8 +1,9 @@
-const Sequelize = require('sequelize');
+/*const Sequelize = require('sequelize');
 //Traer el objeto sequelize
+const sequelize = require('../util/database');
 
 const Encuesta = (sequelize)=>{
-    sequelize.define('Encuesta',{
+    sequelize.define('encuesta',{
         nombreUsuario:{
             type: Sequelize.STRING(50),
             allowNull: false,
@@ -24,8 +25,7 @@ const Encuesta = (sequelize)=>{
             type: Sequelize.STRING(50),
             allowNull: false
         }
+    })
+};
 
-    });
-}
-
-module.exports = Encuesta;
+module.exports = Encuesta;*/

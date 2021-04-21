@@ -1,5 +1,5 @@
-//Traer el modelo asociado a la tabla usuario
-const Usuario = require("../util/database").models.Nivel;
+/*//Traer el modelo asociado a la tabla usuario
+const Usuario = require('../models/Nivel');
 const path = require('path');
 
 exports.postAgregarNivel = (req,res)=>{
@@ -11,4 +11,4 @@ exports.postAgregarNivel = (req,res)=>{
       .catch(error=>console.log(error));
 
     res.redirect("/usuario/confirmacion");
-};
+};*/

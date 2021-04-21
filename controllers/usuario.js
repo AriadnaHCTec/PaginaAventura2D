@@ -1,6 +1,5 @@
 //Traer el modelo asociado a la tabla usuario
-//const Usuario = require('../models/usuario');
-const Usuario = require("../util/database").models.Usuario;
+const Usuario = require('../models/usuario');
 const path = require('path');
 
 exports.getHome = (req,res)=>{
@@ -30,6 +29,7 @@ exports.postAgregarUsuario = (req,res)=>{
 
     res.redirect("/usuario/confirmacion");
 };
+
 
 exports.getConfirmacion = (req,res)=>{
     //res.send("Registro exitoso");
