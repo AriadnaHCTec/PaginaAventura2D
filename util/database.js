@@ -27,8 +27,8 @@ const sequelize = new Sequelize(nombreDB,usuarioDB,passwordDB,{
 //Cargar los modelos
 const modelDefiners = [
     require('../models/usuario'),
-    require('../models/nivel'),
     require('../models/encuesta'),
+    require('../models/nivel'),
     require('../models/usuarioNivel')
 ];
 
@@ -40,5 +40,6 @@ for(const modelDefiner of modelDefiners){
 //Construir las relaciones
 applyRelations(sequelize);
 
-//exportando el objeto sequelize (elemento de conexion)
+
+//exportando el objeto sequelize
 module.exports = sequelize;
