@@ -1,4 +1,4 @@
-//Traer el modelo asociado a la tabla usuario
+/*//Traer el modelo asociado a la tabla usuario
 const Usuario = require('../models/Encuesta');
 const path = require('path');
 
@@ -14,4 +14,4 @@ exports.postAgregarEncuesta = (req,res)=>{
       .catch(error=>console.log(error));
 
     res.redirect("/usuario/confirmacion");
-};
+};*/

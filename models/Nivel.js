@@ -1,6 +1,6 @@
-const Sequelize = require('sequelize');
+/*const Sequelize = require('sequelize');
 //Traer el objeto sequelize
-//const sequelize = require('../util/database');
+const sequelize = require('../util/database');
 
 const Nivel = (sequelize)=>{ 
     sequelize.define('nivel',{
@@ -16,4 +16,4 @@ const Nivel = (sequelize)=>{
     })
 };
 
-module.exports = Nivel;
+module.exports = Nivel;*/

@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 //Traer el objeto sequelize
-//const sequelize = require('../util/database');
+const sequelize = require('../util/database');
 
 const Usuario = (sequelize)=>{
     sequelize.define('usuario',{

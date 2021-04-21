@@ -1,6 +1,6 @@
-const Sequelize = require('sequelize');
+/*const Sequelize = require('sequelize');
 //Traer el objeto sequelize
-//const sequelize = require('../util/database');
+const sequelize = require('../util/database');
 
 const UsuarioNivel = (sequelize)=>{
     sequelize.define('usuarioNivel',{
@@ -32,4 +32,4 @@ const UsuarioNivel = (sequelize)=>{
     })
 };
 
-module.exports = UsuarioNivel;
+module.exports = UsuarioNivel;*/

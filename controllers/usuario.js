@@ -1,6 +1,5 @@
 //Traer el modelo asociado a la tabla usuario
 const Usuario = require('../models/usuario');
-//const Jugador = require('../models/jugador');
 const path = require('path');
 
 exports.getHome = (req,res)=>{
@@ -18,40 +17,7 @@ exports.getInicioSesion = (req,res)=>{
 exports.postAgregarUsuario = (req,res)=>{
     console.log(req.body);
     Usuario.create({
-        nombreUsuario: req.body.nombreUsuario,
-        correo: req.body.correoUsuario,
-        contraseña: req.body.contraseñaUsuario,
-        fechaDeNacimiento: req.body.fechaDeNacimientoUsuario,
-        genero: req.body.generoUsuario,
-        profesion: req.body.profesionUsuario,
-        estado: req.body.estadoUsuario
-    }).then(resultado=>console.log("Registro exitoso"))
-      .catch(error=>console.log(error));
-
-    res.redirect("/usuario/confirmacion");
-};
-
-/*
-exports.postAgregarJugador = (req,res)=>{
-    console.log(req.body);
-    Jugador.create({
-        nombreUsuario: req.body.nombreUsuario,
-        contraseña: req.body.contraseñaUsuario,
-        correo: req.body.correoUsuario,
-        genero: req.body.generoUsuario,
-        fechaDeNacimiento: req.body.fechaDeNacimientoUsuario,
-        profesion: req.body.profesionUsuario,
-        estado: req.body.estadoUsuario
-    }).then(resultado=>console.log("Registro exitoso"))
-      .catch(error=>console.log(error));
-
-    res.redirect("/usuario/confirmacion");
-};*/
-
-/*exports.postAgregarJugador = (req,res)=>{
-    console.log(req.body);
-    Jugador.create({
-        nombreUsuario: req.body.nombreUsuario,
+        usuario: req.body.nombreUsuario,
         contraseña: req.body.contraseñaUsuario,
         correo: req.body.correoUsuario,
         genero: req.body.generoUsuario,
@@ -63,7 +29,7 @@ exports.postAgregarJugador = (req,res)=>{
 
     res.redirect("/usuario/confirmacion");
 };
-*/
+
 
 exports.getConfirmacion = (req,res)=>{
     //res.send("Registro exitoso");

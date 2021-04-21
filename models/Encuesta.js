@@ -1,6 +1,6 @@
-const Sequelize = require('sequelize');
+/*const Sequelize = require('sequelize');
 //Traer el objeto sequelize
-//const sequelize = require('../util/database');
+const sequelize = require('../util/database');
 
 const Encuesta = (sequelize)=>{
     sequelize.define('encuesta',{
@@ -28,4 +28,4 @@ const Encuesta = (sequelize)=>{
     })
 };
 
-module.exports = Encuesta;
+module.exports = Encuesta;*/

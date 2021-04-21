@@ -1,8 +1,8 @@
 const express = require("express");
 const usuarioController = require('../controllers/usuario');
-const encuestaController = require('../controllers/encuesta');
-//const jugadorNivelController = require('../controllers/jugadorNivel');
-const nivelController = require('../controllers/nivel');
+/*const encuestaController = require('../controllers/encuesta');
+const jugadorNivelController = require('../controllers/jugadorNivel');
+const nivelController = require('../controllers/nivel');*/
 //mini app
 const router = express.Router();
 
@@ -16,10 +16,10 @@ router.get('/inicioSesion',usuarioController.getInicioSesion);
 
 //Obtener los datos del formulario
 router.post('/agregarUsuario',usuarioController.postAgregarUsuario);
-//router.post('/agregarJugador',usuarioController.postAgregarJugador);
-router.post('/agregarEncuesta',encuestaController.postAgregarEncuesta);
+
+/*router.post('/agregarEncuesta',encuestaController.postAgregarEncuesta);
 router.post('/agregarNivel',nivelController.postAgregarNivel);
-//router.post('/agregarJugadorNivel',jugadorNivelController.postAgregarJugadorNivel);
+router.post('/agregarJugadorNivel',jugadorNivelController.postAgregarJugadorNivel);*/
 
 
 //Mostrar al usuario el resultado de la transaccion
