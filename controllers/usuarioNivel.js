@@ -1,8 +1,8 @@
 //Traer el modelo asociado a la tabla usuario
-const Usuario = require('../models/jugadorNivel');
+const Usuario = require('../models/usuarioNivel');
 const path = require('path');
 
-exports.postAgregarJugadorNivel = (req,res)=>{
+exports.postAgregarUsuarioNivel = (req,res)=>{
     console.log(req.body);
     Usuario.create({
         fechaInicio: req.body.fechaInicioNivel                      

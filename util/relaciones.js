@@ -1,19 +1,19 @@
 //funcion que recibe el objeto de conexion
 function applyRelations(sequelize){
     console.log(sequelize.models);
-    const Jugador = sequelize.models.jugador;
+    const Usuario = sequelize.models.usuario;
     const Nivel = sequelize.models.nivel;
     const Encuesta = sequelize.models.encuesta;
-    const JugadorNivel = sequelize.models.jugadorNivel
+    const UsuarioNivel = sequelize.models.usuarioNivel
 
     //Relacion 1:N
 
-    Encuesta.hasMany(Jugador);
-    Jugador.belongsTo(Encuesta);
+    Encuesta.hasMany(Usuario);
+    Usuario.belongsTo(Encuesta);
 
     //Relacion M:N
-    Jugador.belongsToMany(Nivel, {through:JugadorNivel});
-    Nivel.belongsToMany(Jugador, {through:JugadorNivel});
+    Usuario.belongsToMany(Nivel, {through:UsuarioNivel});
+    Nivel.belongsToMany(Usuario, {through:UsuarioNivel});
 
 }
 

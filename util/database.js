@@ -10,7 +10,7 @@ const hostDB = 'localhost';
 const dialectoDB= 'mssql';
 
 const sequelize = new Sequelize(nombreDB,usuarioDB,passwordDB,{
-    //host: hostDB,
+    host: hostDB,
     dialect:dialectoDB,
     dialectOptions:{
         options:{
@@ -26,10 +26,10 @@ const sequelize = new Sequelize(nombreDB,usuarioDB,passwordDB,{
 
 //Cargar los modelos
 const modelDefiners = [
-    require('../models/jugador'),
+    require('../models/usuario'),
     require('../models/nivel'),
     require('../models/encuesta'),
-    require('../models/jugadorNivel')
+    require('../models/usuarioNivel')
 ];
 
 //Vincular el objeto de conexion con los modelos

@@ -2,8 +2,13 @@ const Sequelize = require('sequelize');
 //Traer el objeto sequelize
 //const sequelize = require('../util/database');
 
-const JugadorNivel = (sequelize)=>{
-    sequelize.define('jugadorNivel',{
+const UsuarioNivel = (sequelize)=>{
+    sequelize.define('usuarioNivel',{
+        idUsuarioNivel:{
+            type: Sequelize.INTEGER,
+            allowNull: false,
+            primaryKey: true
+        },
         fechaInicio:{
             type: Sequelize.DATEONLY,
             allowNull: false,  
@@ -27,4 +32,4 @@ const JugadorNivel = (sequelize)=>{
     })
 };
 
-module.exports = JugadorNivel;
+module.exports = UsuarioNivel;
