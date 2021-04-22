@@ -27,6 +27,11 @@ const UsuarioNivel = (sequelize)=>{
         intentoPreguntas:{
             type: Sequelize.INTEGER,
             allowNull: true
+        },
+        puntos:{
+            type: Sequelize.INTEGER,
+            allowNull: true,
+            defaultValue: 0
         }
     })
 };

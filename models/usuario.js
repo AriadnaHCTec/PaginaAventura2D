@@ -35,6 +35,11 @@ const Usuario = (sequelize)=>{
         estado:{
             type: Sequelize.STRING,
             allowNull: true
+        },
+        estadoJuego:{
+            type: Sequelize.BOOLEAN,
+            allowNull: true,
+            defaultValue: false
         }
     
     })  
