@@ -18,15 +18,18 @@ const UsuarioNivel = (sequelize)=>{
         },
         vidas:{
             type: Sequelize.INTEGER,
-            allowNull: true
+            allowNull: true,
+            defaultValue:0
         },
         preguntas:{
             type: Sequelize.INTEGER,
-            allowNull: true
+            allowNull: true,
+            defaultValue:0
         },
         intentoPreguntas:{
             type: Sequelize.INTEGER,
-            allowNull: true
+            allowNull: true,
+            defaultValue:0
         },
         puntos:{
             type: Sequelize.INTEGER,

@@ -16,7 +16,7 @@ const Usuario = (sequelize)=>{
             allowNull: false
         },    
         fechaRegistro:{
-            type: Sequelize.DATE,
+            type: Sequelize.DATEONLY,
             allowNull: true,
             defaultValue: new Date()
         },
@@ -25,7 +25,7 @@ const Usuario = (sequelize)=>{
             allowNull: false
         },
         fechaDeNacimiento:{
-            type: Sequelize.DATE,
+            type: Sequelize.DATEONLY,
             allowNull: false
         },
         profesion:{
