@@ -1,14 +1,12 @@
 //Traer el modelo asociado a la tabla usuario
 //const Usuario = require('../models/usuario');
-const Usuario = require("../util/database").models.Usuario;
+const Sequelize = require('sequelize');
+const sequelize = require("../util/database");
+const Usuario = sequelize.models.Usuario;
 const path = require('path');
 
-exports.getHome = (req,res)=>{
+exports.getHome = (req,res)=>{    
     res.sendFile(path.join(__dirname,'..','views','home.html'));
-}
-
-exports.getHomeSteam = (req,res)=>{
-    res.sendFile(path.join(__dirname,'..','views','homeSteam.html'));
 }
 
 exports.getAgregarUsuario = (req,res)=>{
@@ -45,8 +43,7 @@ exports.getRegistros = (req,res)=>{
     //query
     //SELECT * from usuario;
     Usuario.findAll()
-        .then(registros=>{
-            //console.log(registros)
+        .then(registros=>{           
             var data=[];
             registros.forEach(registro=>{
                 data.push(registro.dataValues);
@@ -60,12 +57,31 @@ exports.getRegistros = (req,res)=>{
         })    
 };
 
+
+exports.getHomeSteam = (req,res)=>{
+    sequelize.query("SELECT COUNT(*) usuario FROM Usuario",{
+        type: Sequelize.QueryTypes.SELECT
+    }).then(registros=>{           
+        var data=[];
+        registros.forEach(registro=>{
+            data.push(registro);
+        });
+        //console.log(data);
+        res.render('homeSteam.html',{
+            personas:data,
+            sesion:"Autorizado",
+            hora:"14:00"
+        });
+    })    
+    //res.sendFile(path.join(__dirname,'..','views','homeSteam.html'));
+}
+
 exports.postIniciarSesion = (req,res)=>{
     console.log(req.body);
-    Usuario.findByPk(req.body.usuario)
+    Usuario.findByPk(req.body.nombreUsuario)
     .then(resultado=>{
         if(resultado){
-            if(req.body.contraseña == resultado.contraseña){
+            if(req.body.contraseñaUsuario == resultado.contraseña){
                 res.send("osiosi");
             }else{
                 res.send("incorrecto");
@@ -97,3 +113,4 @@ exports.getRegistro = (req,res) =>{
         res.send(error);
     })
 }
+

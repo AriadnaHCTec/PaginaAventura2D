@@ -33,5 +33,17 @@
     </ul>
   </div>
 </nav>
+<p>Daticos obtenidos de queries</p>
+<%personas.usuario%>
+<p>si pero yo tengo otros datos</p>
+<div>
+  <%personas.forEach((persona)=>{%>
+    <p><%=persona.usuario%></p>
+  <%});%>
+</div>
+
+
+
+
 </body>
 </html>
