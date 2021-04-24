@@ -1,5 +1,5 @@
 const express = require("express");
-const Jugador = require('../models/Encuesta');
+const Jugador = require('../models/encuesta');
 const usuarioController = require('../controllers/usuario');
 const encuestaController = require('../controllers/encuesta');
 const usuarioNivelController = require('../controllers/usuarioNivel');

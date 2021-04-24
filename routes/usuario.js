@@ -1,5 +1,5 @@
 const express = require("express");
-const Jugador = require('../models/Encuesta');
+const Jugador = require('../models/encuesta');
 const usuarioController = require('../controllers/usuario');
 const encuestaController = require('../controllers/encuesta');
 const usuarioNivelController = require('../controllers/usuarioNivel');
@@ -32,10 +32,7 @@ router.get('/registros',usuarioController.getRegistros);
 router.get('/registro/:usuario',usuarioController.getRegistro);
 
 
-
-
-
-/*INTERACCIÓN CON VIDEOJUEGO*/ 
+/*INTERACCIÓN CON VIDEOJUEGO*/
 //Obtener los datos del formulario
 router.post('/iniciarSesion',usuarioController.postIniciarSesion);
 
