@@ -10,7 +10,9 @@ exports.postAgregarUsuarioNivel = (req,res)=>{
         vidas: req.body.vidas,
         preguntas: req.body.preguntas,
         intentoPreguntas: req.body.intentoPreguntas,
-        puntos: req.body.puntos
+        puntos: req.body.puntos,
+        fechaInicio: req.body.fechaInicio,
+        fechaFinal: req.body.fechaFinal
 
     }).then(resultado=>console.log("Registro exitoso"))
       .catch(error=>console.log(error));
