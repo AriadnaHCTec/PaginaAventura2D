@@ -5,7 +5,8 @@ const UsuarioNivel = (sequelize)=>{
         idUsuarioNivel:{
             type: Sequelize.INTEGER,
             allowNull: false,
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         fechaInicio:{
             type: Sequelize.DATEONLY,

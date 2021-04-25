@@ -3,8 +3,7 @@ const Usuario = require("../util/database").models.usuarioNivel;
 
 exports.postAgregarUsuarioNivel = (req,res)=>{
     console.log(req.body);
-    Usuario.create({
-        idUsuarioNivel: req.body.idUsuarioNivel,                       
+    Usuario.create({                      
         UsuarioUsuario: req.body.UsuarioUsuario,
         NivelNumNivel: req.body.NivelNumNivel,
         vidas: req.body.vidas,
