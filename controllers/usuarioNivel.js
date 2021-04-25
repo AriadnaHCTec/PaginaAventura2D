@@ -6,7 +6,12 @@ exports.postAgregarUsuarioNivel = (req,res)=>{
     Usuario.create({
         idUsuarioNivel: req.body.idUsuarioNivel,                       
         UsuarioUsuario: req.body.UsuarioUsuario,
-        NivelNumNivel: req.body.NivelNumNivel                      
+        NivelNumNivel: req.body.NivelNumNivel,
+        vidas: req.body.vidas,
+        preguntas: req.body.preguntas,
+        intentoPreguntas: req.body.intentoPreguntas,
+        puntos: req.body.puntos
+
     }).then(resultado=>console.log("Registro exitoso"))
       .catch(error=>console.log(error));
 
