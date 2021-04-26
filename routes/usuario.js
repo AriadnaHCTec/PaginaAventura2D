@@ -12,6 +12,7 @@ router.get('/home',usuarioController.getHome);
 
 //Mostrar el formulario
 router.get('/agregarUsuario',usuarioController.getAgregarUsuario);
+router.get('/agregarEncuesta',usuarioController.getAgregarEncuesta);
 
 router.get('/inicioSesion',usuarioController.getInicioSesion);
 

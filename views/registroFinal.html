@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale =1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/estiloFormulario.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="container-fluid p-3 bg text-white">
+                <h1>Crea tu cuenta</h1>
+            </div>
+        </header>
+        <br/><br/>
+        <div class="container">
+            <form action="agregarEncuesta" method="post">
+                <div class="row m-0">
+                    <div class="form-group col-6">                        
+                        <div>
+                            <label for="nombre de usuario">Nombre de usuario: </label>
+                            <input type="text" class="form-control" placeholder="Nombre" id="nombreEncuesta" name="nombreEncuesta" required>
+                        </div><br/>
+                        <div>
+                            <label for="interesante">¿Te gustó el videojeugo?</label><br>
+                            <center>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <input style="width: 20px; height: 20px" type="radio" id="mucho" name="interesanteEncuesta" value="Mucho" required>
+                                        <label for="mucho"><h4>Mucho</h4></label><br>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="50-50" name="interesanteEncuesta" value="50/50" required>
+                                        <label for="50/50"><h4>50/50</h4></label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="no" name="interesanteEncuesta" value="No" required>
+                                        <label for="interesanteEncuesta"><h4>No</h4></label>
+                                    </div>
+                                </div>
+                            </center>
+                        </div><br/>
+                        <div>
+                            <label for="aprendio">¿Aprendiste?</label><br>
+                            <center>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <input style="width: 20px; height: 20px" type="radio" id="mucho" name="aprendioEncuesta" value="Mucho" required>
+                                        <label for="mucho"><h4>Mucho</h4></label><br>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="50-50" name="aprendioEncuesta" value="50/50" required>
+                                        <label for="50/50"><h4>50/50</h4></label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="no" name="aprendioEncuesta" value="No" required>
+                                        <label for="no"><h4>No</h4></label>
+                                    </div>
+                                </div>
+                            </center>
+                        </div><br/>
+                        <div>
+                            <label for="profesion">¿Considerás que se impulsó al difusión de carreras científicas(STEAM)?</label><br>
+                            <center>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <input style="width: 20px; height: 20px" type="radio" id="mucho" name="profesionEncuesta" value="Mucho" required>
+                                        <label for="mucho"><h4>Mucho</h4></label><br>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="50-50" name="profesionEncuesta" value="50/50" required>
+                                        <label for="50/50"><h4>50/50</h4></label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="no" name="profesionEncuesta" value="No" required>
+                                        <label for="no"><h4>No</h4></label>
+                                    </div>
+                                </div>
+                            </center>
+                        </div><br/>
+                    </div>
+                    <div>
+                        <label for="profesion">¿Te sientes intersado por la organización STEAM?</label><br>
+                        <center>
+                            <div class="row">
+                                <div class="col-3">
+                                    <input style="width: 20px; height: 20px" type="radio" id="mucho" name="interesStemEncuesta" value="Mucho" required>
+                                    <label for="mucho"><h4>Mucho</h4></label><br>
+                                </div>
+                                <div class="col-4">
+                                    <input style="width: 20px; height: 20px" type="radio" id="50-50" name="interesStemEncuesta" value="50/50" required>
+                                    <label for="50/50"><h4>50/50</h4></label>
+                                </div>
+                                <div class="col-4">
+                                    <input style="width: 20px; height: 20px" type="radio" id="no" name="interesStemEncuesta" value="No" required>
+                                    <label for="no"><h4>No</h4></label>
+                                </div>
+                            </div>
+                        </center>
+                    </div><br/>
+                </div>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col text-center">
+                            <button class="btn btn-outline-info" type="reset">Reset</button>
+                            <button class="btn btn-info" type="submit">Enviar</button>
+                          </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                </div>
+            </form>
+        </div><br/><br/>  
+        <footer>
+            <div class="container-fluid p-3 bg">
+                <p> Creadores hermosos: Miguel, Javier, Sarahí y Ariadna</p>
+            </div>
+       </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    </body>
+</html>

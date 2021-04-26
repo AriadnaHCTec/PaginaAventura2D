@@ -13,9 +13,15 @@ exports.getAgregarUsuario = (req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','registro.html'));
 }
 
+exports.getAgregarEncuesta = (req,res)=>{
+    res.sendFile(path.join(__dirname,'..','views','registroFinal.html'));
+}
+
 exports.getInicioSesion = (req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','inicioSesion.html'));
 }
+
+
 
 exports.postAgregarUsuario = (req,res)=>{
     console.log(req.body);
