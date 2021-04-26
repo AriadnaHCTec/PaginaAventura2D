@@ -8,6 +8,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="/css/home.css">
+  <style>
+    .counter{
+    font-size:25px;
+    font-weight:bold;
+    text-align:center;
+}
+  </style>
 </head>
 <body>
 ​
@@ -33,8 +40,13 @@
     </ul>
   </div>
 </nav>
+<div onmouseover="contador()">
+<div class="counter" data-target="250"><%=personas[0].usuario%></div>
+<h3>Título</h3>
+</div>
+
 <p>Daticos obtenidos de queries</p>
-<%personas.usuario%>
+<p><%=personas[0].usuario%></p>
 <p>si pero yo tengo otros datos</p>
 <div>
   <%personas.forEach((persona)=>{%>
@@ -42,6 +54,22 @@
   <%});%>
 </div>
 
+<script>
+  function contador() {
+const counters = document.querySelectorAll('.counter');
+const speed = 100;
+counters.forEach(counter => {
+const updateCount = () => {
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+const inc = target / speed;
+if (count < target) {
+counter.innerText = count + inc;
+setTimeout(updateCount, 1);
+} else {
+counter.innerText = target;}};
+updateCount();});}
+</script>
 
 
 

@@ -17,8 +17,9 @@
         <br/><br/>
         <div class="container">
             <form action="agregarEncuesta" method="post">
-                <div class="row m-0">
-                    <div class="form-group col-6">                        
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
                         <div>
                             <label for="nombre de usuario">Nombre de usuario: </label>
                             <input type="text" class="form-control" placeholder="Nombre" id="nombreEncuesta" name="nombreEncuesta" required>
@@ -62,7 +63,7 @@
                             </center>
                         </div><br/>
                         <div>
-                            <label for="profesion">¿Considerás que se impulsó al difusión de carreras científicas(STEAM)?</label><br>
+                            <label for="profesion">¿Consideras que se impulsó al difusión de carreras científicas(STEAM)?</label><br>
                             <center>
                                 <div class="row">
                                     <div class="col-3">
@@ -80,35 +81,36 @@
                                 </div>
                             </center>
                         </div><br/>
-                    </div>
-                    <div>
-                        <label for="profesion">¿Te sientes intersado por la organización STEAM?</label><br>
-                        <center>
-                            <div class="row">
-                                <div class="col-3">
-                                    <input style="width: 20px; height: 20px" type="radio" id="mucho" name="interesStemEncuesta" value="Mucho" required>
-                                    <label for="mucho"><h4>Mucho</h4></label><br>
+                        <div>
+                            <label for="profesion">¿Te sientes intersado por la organización STEAM?</label><br>
+                            <center>
+                                <div class="row">
+                                    <div class="col-3">
+                                        <input style="width: 20px; height: 20px" type="radio" id="mucho" name="interesStemEncuesta" value="Mucho" required>
+                                        <label for="mucho"><h4>Mucho</h4></label><br>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="50-50" name="interesStemEncuesta" value="50/50" required>
+                                        <label for="50/50"><h4>50/50</h4></label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input style="width: 20px; height: 20px" type="radio" id="no" name="interesStemEncuesta" value="No" required>
+                                        <label for="no"><h4>No</h4></label>
+                                    </div>
                                 </div>
-                                <div class="col-4">
-                                    <input style="width: 20px; height: 20px" type="radio" id="50-50" name="interesStemEncuesta" value="50/50" required>
-                                    <label for="50/50"><h4>50/50</h4></label>
-                                </div>
-                                <div class="col-4">
-                                    <input style="width: 20px; height: 20px" type="radio" id="no" name="interesStemEncuesta" value="No" required>
-                                    <label for="no"><h4>No</h4></label>
-                                </div>
-                            </div>
-                        </center>
-                    </div><br/>
+                            </center>
+                        </div><br/>
+                        </div>
+                    </div>                    
                 </div>
-                    <div class="container">
-                        <div class="row">
-                          <div class="col text-center">
-                            <button class="btn btn-outline-info" type="reset">Reset</button>
-                            <button class="btn btn-info" type="submit">Enviar</button>
-                          </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                        <button class="btn btn-outline-info" type="reset">Reset</button>
+                        <button class="btn btn-info" type="submit">Enviar</button>
                         </div>
                     </div>
+                </div>
 
                     <br>
                     <br>
