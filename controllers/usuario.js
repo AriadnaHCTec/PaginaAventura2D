@@ -72,14 +72,12 @@ exports.getHomeSteam = (req,res)=>{
         registros.forEach(registro=>{
             data.push(registro);
         });
-        //console.log(data);
         res.render('homeSteam.html',{
             personas:data,
             sesion:"Autorizado",
             hora:"14:00"
         });
     })    
-    //res.sendFile(path.join(__dirname,'..','views','homeSteam.html'));
 }
 
 exports.postIniciarSesion = (req,res)=>{
