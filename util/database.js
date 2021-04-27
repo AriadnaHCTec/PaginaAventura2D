@@ -29,7 +29,8 @@ const modelDefiners = [
     require('../models/usuario'),
     require('../models/encuesta'),
     require('../models/nivel'),
-    require('../models/usuarioNivel')
+    require('../models/usuarioNivel'),
+    require('../models/usuarioSteam')
 ];
 
 //Vincular el objeto de conexion con los modelos
