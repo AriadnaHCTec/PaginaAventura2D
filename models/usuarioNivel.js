@@ -4,9 +4,9 @@ const UsuarioNivel = (sequelize)=>{
     sequelize.define('usuarioNivel',{
         idUsuarioNivel:{
             type: Sequelize.INTEGER,
-            allowNull: false,
+            allowNull: true,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
         fechaInicio:{
             type: Sequelize.DATEONLY,
