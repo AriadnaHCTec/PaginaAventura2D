@@ -118,3 +118,13 @@ exports.getRegistro = (req,res) =>{
     })
 }
 
+exports.postUsuarioTermino = (req,res)=>{
+    console.log(req.body);
+    Usuario.findByPk(req.body.nombreUsuario)
+      .then(usuario=>{    
+      usuario.estadoJuego = true
+      return usuario && usuario.save();
+      });
+    res.redirect("/usuario/confirmacion");
+  };
+

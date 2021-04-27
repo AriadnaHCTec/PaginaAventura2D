@@ -17,6 +17,7 @@ router.get('/agregarEncuesta',usuarioController.getAgregarEncuesta);
 router.get('/inicioSesion',usuarioController.getInicioSesion);
 
 //Obtener los datos del formulario
+router.post('/UsuarioTermino',usuarioController.postUsuarioTermino);
 router.post('/agregarUsuario',usuarioController.postAgregarUsuario);
 router.post('/agregarEncuesta',encuestaController.postAgregarEncuesta);
 router.post('/agregarNivel',nivelController.postAgregarNivel);

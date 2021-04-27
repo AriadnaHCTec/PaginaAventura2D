@@ -14,8 +14,8 @@ exports.postAgregarUsuarioNivel = (req,res)=>{
 
 exports.postActualizarNivel = (req,res)=>{
   console.log(req.body);
-  Usuario.findByPk(req.query.UsuarioUsuario)
-    .then(usuario=>{
+  Usuario.findOne({where: {UsuarioUsuario: req.body.UsuarioUsuario,NivelNumNivel: req.body.NivelNumNivel}})
+    .then(usuario=>{    
     usuario.vidas=req.body.vidas,
     usuario.preguntas= req.body.preguntas,
     usuario.intentoPreguntas= req.body.intentoPreguntas,
