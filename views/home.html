@@ -10,40 +10,24 @@
   <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-​<header>
-<nav class="navbar navbar-inverse header fuente">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">AVENTURA 2D</a>
+  <!--navbar-fixed-top-->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Aventura2D</a>
+      </div>
+      <ul class="nav navbar-nav">        
+        <li class="active"><a href="#">Home</a></li>        
+        <li><a href="#contenido">Contenido</a></li>
+        <li><a href="#descarga">Descarga</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/Usuario/agregarUsuario"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="/Usuario/inicioSesion"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="/Usuario/agregarUsuario"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="/Usuario/inicioSesion"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-</header>
-<center> 
-<!--<br/>-->
-<!---<div class="container">
-  <div class="row">
-    <div class="col text-center">
-        <a href="/exe/Ejecutable.exe" download="" class="descarga"><span>Descargar</span></a>
-    </div>
-  </div>
-</div>
-<br/><br/>-->
+  </nav>
+<center>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
   <ol class="carousel-indicators">
@@ -52,7 +36,7 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
-  <div class="carousel-inner">
+  <div class="carousel-inner" id="contenido">
     <div class="item active">
       <video src="/images/clip_edificio1.mov" width="50%" alt="1" autoplay muted loop> </video>
     </div>
@@ -78,22 +62,26 @@
   </a>
 </div>
 ​</center>
-<div class="container fuente">
-  <h1>Aventura 2D</h1>
-  <h3 class="interlineado">
-    Adentrate en esta aventura postapocalíptica donde los humanos viven en refugios y donde la humanidad se extingue poco a poco debido a la escasez de comida.
-    Hay una solución para salvar al mundo, crear una máquina que produzca alimentos y durante la travesía tendrás que adquirir los conocimientos necesarios para lograrlo.
-    La supervivencia del planeta depende de ti. Sólo tú puedes cambiar el rumbo de la historia.
-  </h3>
-</div><br/>
-
-<div class="container">
-  <div class="row">
-    <div class="col text-center">
-        <a href="/exe/Ejecutable.exe" download="" class="descarga"><span>Descargar</span></a>
+<div id="descarga" class="container">
+  <div class="container fuente">
+    <h1>Aventura 2D</h1>
+    <h3 class="interlineado">
+      Adentrate en esta aventura postapocalíptica donde los humanos viven en refugios y donde la humanidad se extingue poco a poco debido a la escasez de comida.
+      Hay una solución para salvar al mundo, crear una máquina que produzca alimentos y durante la travesía tendrás que adquirir los conocimientos necesarios para lograrlo.
+      La supervivencia del planeta depende de ti. Sólo tú puedes cambiar el rumbo de la historia.
+    </h3>
+  </div><br/>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+          <a href="/exe/Ejecutable.exe" download="" class="descarga"><span>Descargar</span></a>
+      </div>
     </div>
-  </div>
-</div><br/><br/><br/><br/>
+  </div><br/><br/><br/><br/>
+</div>
+
+
 
 
 </body>
