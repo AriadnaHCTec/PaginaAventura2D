@@ -22,7 +22,7 @@ router.post('/agregarUsuario',usuarioController.postAgregarUsuario);
 router.post('/agregarEncuesta',encuestaController.postAgregarEncuesta);
 router.post('/agregarNivel',nivelController.postAgregarNivel);
 router.post('/agregarUsuarioNivel',usuarioNivelController.postAgregarUsuarioNivel);
-router.post('/ActualizarNivel',usuarioNivelController.postActualizarNivel);
+//router.post('/ActualizarNivel',usuarioNivelController.postActualizarNivel);
 
 
 //Mostrar al usuario el resultado de la transaccion
