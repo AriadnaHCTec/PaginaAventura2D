@@ -68,19 +68,7 @@ exports.getRegistros = (req,res)=>{
 
 
 exports.getHomeSteam = (req,res)=>{
-    sequelize.query("SELECT COUNT(*) usuario FROM Usuario",{
-        type: Sequelize.QueryTypes.SELECT
-    }).then(registros=>{           
-        var data=[];
-        registros.forEach(registro=>{
-            data.push(registro);
-        });
-        res.render('homeSteam.html',{
-            personas:data,
-            sesion:"Autorizado",
-            hora:"14:00"
-        });
-    })    
+    res.sendFile(path.join(__dirname,'..','views','homeSteam.html')); 
 }
 
 exports.postIniciarSesion = (req,res)=>{
@@ -89,7 +77,20 @@ exports.postIniciarSesion = (req,res)=>{
     .then(resultado=>{
         if(resultado){
             if(req.body.contraseñaUsuario == resultado.contraseña){
-                res.send("osiosi");
+                Usuario.findByPk(req.body.nombreUsuario)
+                    .then(resultado=>{
+                        var data=[];
+                        data.push(resultado.dataValues);
+                        res.render('DataTable.html',{
+                            personas:data,
+                            sesion:"Autorizado",
+                            hora:"14:00"
+                        });
+                    })
+                    .catch(error=>{
+                        console.log(error);
+                        res.send(error);
+                    })
             }else{
             }
         }else{                res.sendFile(path.join(__dirname,'..','views','error.html'));

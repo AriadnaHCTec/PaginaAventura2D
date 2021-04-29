@@ -7,13 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/css/homeSteam.css">
   <link rel="stylesheet" href="/css/home.css">
-  <style>
-    .counter{
-    font-size:25px;
-    font-weight:bold;
-    text-align:center;
-}
   </style>
 </head>
 <body>
@@ -25,53 +20,21 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
+      <li><a href="#estadisticas">Estadísticas</a></li>
+      <li><a href="#manual">Manual de usuario</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">      
     </ul>
   </div>
 </nav>
-
-<!--<div onmouseover="contador()">
-<div class="counter" data-target="250"><%=personas[0].usuario%></div>
-<h3>Título</h3>
-</div>
-
-<p>Daticos obtenidos de queries</p>
-<p><%=personas[0].usuario%></p>
-<p>si pero yo tengo otros datos</p>
-<div>
-  <%personas.forEach((persona)=>{%>
-    <p><%=persona.usuario%></p>
-  <%});%>
-</div>-->
-
-<iframe src="https://public.tableau.com/views/Libro1_16191966273150/Dashboard1?:showVizHome=no&:embed=true"
+<iframe id= "estadisticas" src="https://public.tableau.com/views/Libro1_16191966273150/Dashboard1?:showVizHome=no&:embed=true"
  width="100%" height="700"></iframe>
-<script>
-  function contador() {
-const counters = document.querySelectorAll('.counter');
-const speed = 100;
-counters.forEach(counter => {
-const updateCount = () => {
-const target = +counter.getAttribute('data-target');
-const count = +counter.innerText;
-const inc = target / speed;
-if (count < target) {
-counter.innerText = count + inc;
-setTimeout(updateCount, 1);
-} else {
-counter.innerText = target;}};
-updateCount();});}
-</script>
-
+  <!--Estos atributos se habían agregado a CSS pero no se carda el id-->
+ <div id= "manual" >
+    <div class="manual2">
+        <iframe frameborder="0" width="1200" height="675" class="frame" src="https://view.genial.ly/6089a00efdda810d5e287a62" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> 
+    </div> 
+  </div>
 
 
 </body>
