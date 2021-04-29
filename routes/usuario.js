@@ -39,5 +39,6 @@ router.get('/registro/:usuario',usuarioController.getRegistro);
 /*INTERACCIÓN CON VIDEOJUEGO*/
 //Obtener los datos del formulario
 router.post('/iniciarSesion',usuarioController.postIniciarSesion);
+router.post('/iniciarSesionPagina',usuarioController.postIniciarSesionPagina);
 
 module.exports =router;

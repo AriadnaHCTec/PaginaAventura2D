@@ -18,7 +18,10 @@ exports.getAgregarEncuesta = (req,res)=>{
 }
 
 exports.getInicioSesion = (req,res)=>{
-    res.sendFile(path.join(__dirname,'..','views','inicioSesion.html'));
+    //res.sendFile(path.join(__dirname,'..','views','inicioSesion.html'));
+    res.render('inicioSesion.html',{
+        error: 0
+    });
 }
 
 exports.getError = (req,res)=>{
@@ -77,25 +80,50 @@ exports.postIniciarSesion = (req,res)=>{
     .then(resultado=>{
         if(resultado){
             if(req.body.contraseñaUsuario == resultado.contraseña){
-                Usuario.findByPk(req.body.nombreUsuario)
-                    .then(resultado=>{
-                        var data=[];
-                        data.push(resultado.dataValues);
-                        res.render('DataTable.html',{
-                            personas:data,
-                            sesion:"Autorizado",
-                            hora:"14:00"
-                        });
-                    })
-                    .catch(error=>{
-                        console.log(error);
-                        res.send(error);
-                    })
+                res.send("osiosi");
             }else{
+                res.send("incorrecto");
             }
-        }else{                res.sendFile(path.join(__dirname,'..','views','error.html'));
+        }else{
+            res.send("no existe el usuario");
+        }        
+    })
+    .catch(error=>{
+        console.log(error);
+        res.send(error);
+    })
+};
 
-            res.sendFile(path.join(__dirname,'..','views','error.html'));
+
+exports.postIniciarSesionPagina = (req,res)=>{
+    console.log(req.body);
+    Usuario.findByPk(req.body.nombreUsuario)
+    .then(resultado=>{
+        if(resultado){
+            if(req.body.contraseñaUsuario == resultado.contraseña){                
+                Usuario.findByPk(req.body.nombreUsuario)
+                .then(resultado=>{
+                    var data=[];
+                    data.push(resultado.dataValues);
+                    res.render('DataTable.html',{
+                        personas:data,
+                        sesion:"Autorizado",
+                        hora:"14:00"
+                    });
+                })
+                .catch(error=>{
+                    console.log(error);
+                    res.send(error);
+                })
+            }else{
+                res.render('inicioSesion.html',{
+                    error: 1
+                });
+            }
+        }else{
+            res.render('inicioSesion.html',{
+                error: 2
+            });
         }        
     })
     .catch(error=>{

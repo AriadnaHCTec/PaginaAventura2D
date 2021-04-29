@@ -6,7 +6,9 @@ const path = require('path');
 
 
 exports.getInicioSesion = (req,res)=>{
-    res.sendFile(path.join(__dirname,'..','views','inicioSesionSteam.html'));
+    res.render('inicioSesionSteam.html',{
+        error: 0
+    });
 }
 
 exports.getError = (req,res)=>{
@@ -20,12 +22,15 @@ exports.postIniciarSesion = (req,res)=>{
         if(resultado){
             if(req.body.contraseñaUsuario == resultado.contraseña){
                 res.sendFile(path.join(__dirname,'..','views','homeSteam.html'));
-                //res.send("osi");
             }else{
-                res.sendFile(path.join(__dirname,'..','views','errorSteam.html'));
+                res.render('inicioSesionSteam.html',{
+                    error: 1
+                });
             }
         }else{
-            res.sendFile(path.join(__dirname,'..','views','errorSteam.html'));
+            res.render('inicioSesionSteam.html',{
+                error: 2
+            });
         }        
     })
     .catch(error=>{
