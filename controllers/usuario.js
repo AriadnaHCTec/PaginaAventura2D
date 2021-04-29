@@ -21,6 +21,9 @@ exports.getInicioSesion = (req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','inicioSesion.html'));
 }
 
+exports.getError = (req,res)=>{
+    res.sendFile(path.join(__dirname,'..','views','error.html'));
+}
 
 
 exports.postAgregarUsuario = (req,res)=>{
@@ -88,10 +91,10 @@ exports.postIniciarSesion = (req,res)=>{
             if(req.body.contraseñaUsuario == resultado.contraseña){
                 res.send("osiosi");
             }else{
-                res.send("incorrecto");
             }
-        }else{
-            res.send("no existe el usuario");
+        }else{                res.sendFile(path.join(__dirname,'..','views','error.html'));
+
+            res.sendFile(path.join(__dirname,'..','views','error.html'));
         }        
     })
     .catch(error=>{

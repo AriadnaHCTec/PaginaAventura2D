@@ -15,6 +15,7 @@ router.get('/agregarUsuario',usuarioController.getAgregarUsuario);
 router.get('/agregarEncuesta',usuarioController.getAgregarEncuesta);
 
 router.get('/inicioSesion',usuarioController.getInicioSesion);
+router.get('/error',usuarioController.getError);
 
 //Obtener los datos del formulario
 router.post('/UsuarioTermino',usuarioController.postUsuarioTermino);

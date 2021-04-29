@@ -10,7 +10,8 @@ const router = express.Router();
 router.get('/home',usuarioController.getHomeSteam);
 
 router.get('/inicioSesionSteam',usuarioSteam.getInicioSesion);
-
+router.get('/error',usuarioSteam.getError);
 router.post('/iniciarSesion',usuarioSteam.postIniciarSesion);
+
 
 module.exports =router;
